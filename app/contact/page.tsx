@@ -96,13 +96,13 @@ export default function ContactPage() {
 
         <form className="space-y-4" onSubmit={handleSubmit}>
           <div>
-            <label className="block text-sm font-medium text-gray-700">Name</label>
+            <label className="block text-sm font-medium text-pink-900">Name</label>
             <input
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
               placeholder="Your name"
-              className="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2"
+              className="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2 text-gray-700"
             />
             {errors.name && <p className="text-red-500 text-sm mt-1">{errors.name}</p>}
           </div>
@@ -114,7 +114,7 @@ export default function ContactPage() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="you@example.com"
-              className="mt-1 block w-full rounded-lg border border-gray-300 px-3 py-2"
+              className="mt-1 block w-full rounded-lg border border-gray-700 px-3 py-2 text-gray-700"
             />
             {errors.email && <p className="text-red-500 text-sm mt-1">{errors.email}</p>}
           </div>
