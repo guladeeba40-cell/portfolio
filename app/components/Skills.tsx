@@ -24,10 +24,10 @@ export default function Skills() {
                 {skills.map((skill) => (
                     <div
                         key={skill}
-                        className="flex h-20 max-w-md min-h-0 flex-col items-center justify-center rounded-xl border border-gray-200 bg-white px-2 text-xs sm:text-sm font-medium text-gray-800 shadow-sm"
+                        className="flex p-4 max-w-md min-h-0 flex-col items-center justify-center rounded-xl border border-gray-200 bg-white px-2 text-xs sm:text-sm font-medium text-gray-800 shadow-sm"
                     >
                         {skill}
-                    </div>
+                    </div> 
                 ))}
             </div>
         </section>

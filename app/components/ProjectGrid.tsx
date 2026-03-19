@@ -5,31 +5,40 @@ const projects = [
   {
     id: 1,
     title: "Portfolio Website",
-    description: "A personal portfolio built with Next.js and Tailwind CSS.",
-    image: "/a.jpg",
-    link: "#",
+    tech: "Next.js, Tailwind CSS",
+    image: "/po.jpg",
+    description:
+      "A personal portfolio built with Next.js and Tailwind CSS to showcase my frontend developer projects, skills, and experience.",
+    liveUrl: "https://velvety-heliotrope-d3f3f5.netlify.app/",
+    viewCode: "https://github.com/guladeeba40-cell/portfolio",
   },
   {
     id: 2,
-    title: "E-commerce Website",
-    description: "A full-stack e-commerce site built with React and Node.js.",
-    image: "/images/e.jpg",
-    link: "/project",
+    title: "IndoFood",
+    tech: "HTML, CSS, JavaScript",
+    image: "/food.jpg",
+    description:
+      "IndoFood is a responsive website showcasing traditional Indonesian dishes. It features interactive menus, high-quality food images, and a clean, user-friendly layout.",
+    liveUrl: "https://incandescent-puppy-4186a5.netlify.app/",
+    viewCode: "https://github.com/guladeeba40-cell/food-website",
   },
   {
     id: 3,
-    title: "Blog Platform",
-    description: "A modern blogging platform with Markdown support.",
-    image: "/b.jpg",
-    link: "#",
+    title: "Perfume-Website",
+    tech: "HTML, CSS",
+    image: "/perfume.jpg",
+    description:
+      "My first project is a dynamic web app built with React and Redux, fetching data from an external API. It demonstrates state management, API integration, and interactive UI components.",
+    liveUrl: "https://leafy-gnome-012a8d.netlify.app/",
+    viewCode: "https://github.com/guladeeba40-cell/perfume-website",
   },
-  {
-    id: 4,
-    title: "Weather App",
-    description: "A weather forecasting app using the OpenWeather API.",
-    image: "/c.jpg",
-    link: "#",
-  },
+  // {
+  //   id: 4,
+  //   title: "Weather App",
+  //   description: "A weather forecasting app using the OpenWeather API.",
+  //   image: "/c.jpg",
+  //   link: "#",
+  // },
 ];
 
 export default function ProjectGrid() {
@@ -39,10 +48,9 @@ export default function ProjectGrid() {
 
       <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {projects.map((project) => (
-          <a
+          <div
             key={project.id}
-            href={project.link}
-            className="text-black block overflow-hidden rounded-xl border border-black shadow hover:shadow-lg transition hover:-translate-y-1"
+            className="bg-white overflow-hidden rounded-xl border border-black shadow hover:shadow-lg transition hover:-translate-y-1"
           >
             <div className="relative w-full h-48">
               <Image
@@ -52,13 +60,33 @@ export default function ProjectGrid() {
                 className="object-cover"
               />
             </div>
+            {/* project info */}
             <div className="p-4">
               <h3 className="text-lg font-semibold text-black">
                 {project.title}
               </h3>
+              <p className="text-xs text-zinc-500 mb-2">{project.tech}</p>
               <p className="mt-1 text-black text-sm">{project.description}</p>
+              <div className="mt-4 flex gap-2">
+                <a
+                  href={project.liveUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-md border border-blue-600 bg-blue-600 px-3 py-1 text-xs font-medium text-white hover:bg-blue-700"
+                >
+                  Live Site
+                </a>
+                <a
+                  href={project.viewCode}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-md border border-gray-700 px-3 py-1 text-xs font-medium text-gray-700 hover:bg-gray-100"
+                >
+                  View Code
+                </a>
+              </div>
             </div>
-          </a>
+          </div>
         ))}
       </div>
     </div>
