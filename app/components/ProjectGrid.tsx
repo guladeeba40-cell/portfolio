@@ -6,7 +6,7 @@ const projects = [
     id: 1,
     title: "Portfolio Website",
     tech: "Next.js, Tailwind CSS",
-    image: "/po.jpg",
+    image: "/portfolio.jpg",
     description:
       "A personal portfolio built with Next.js and Tailwind CSS to showcase my frontend developer projects, skills, and experience.",
     liveUrl: "https://velvety-heliotrope-d3f3f5.netlify.app/",

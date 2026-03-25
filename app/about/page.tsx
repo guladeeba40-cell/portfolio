@@ -1,9 +1,6 @@
-import Navbar from "../components/Navbar";
-
 export default function AboutPage() {
   return (
     <>
-      <Navbar />
       <main className="pt-16 bg-gray-50">
         <section className="py-24 px-6 max-w-3xl mx-auto">
           <h1 className="text-4xl font-bold tracking-tight text-pink-900 mb-6">
