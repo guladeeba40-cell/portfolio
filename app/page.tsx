@@ -1,4 +1,3 @@
-
 import Skills from "./components/Skills";
 import Image from "next/image";
 import Link from "next/link";
